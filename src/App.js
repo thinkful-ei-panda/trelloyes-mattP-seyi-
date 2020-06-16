@@ -1,37 +1,29 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import List from './List'
-
+import store from './STORE'
 
 class App extends React.Component {
-  
-
-  render() {
-    const store = this.props.store.STORE
-    const lists = store.lists.map(listItem => (
-      <List 
-        key = {listItem.id}
-        header = {listItem.header}
-        cards = {listItem.cardIds.map(id => store.allCards[id])}
-      />
-    ))
-    return (
-      <main className='App'>
-        <header className='App-header'>
-          <h1>Trelloyes</h1>
-          <div className='App-list'>
-            {lists}
-          </div>
-        </header>
-      </main>
-    )
-  }
-  static defaultProps = {
-    store: {
-      lists: [],
-      allCards: {},
-    }
-  }
+	render() {
+		return (
+			<main className="App">
+				<header className="App-header">
+					<h1>Trelloyes!</h1>
+				</header>
+				<div className="App-list">
+					{store.lists.map((list) => (
+						<List
+							key={list.id}
+							header={list.header}
+							cards={list.cardIds.map(
+								(id) => store.allCards[id]
+							)}
+						/>
+					))}
+				</div>
+			</main>
+		)
+	}
 }
 
-export default App;
+export default App
