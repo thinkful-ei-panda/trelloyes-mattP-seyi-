@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/trelloyes-mattP-seyi-/static/css/main.89af4e8e.chunk.css",
+    "main.js": "/trelloyes-mattP-seyi-/static/js/main.e8ac68de.chunk.js",
+    "main.js.map": "/trelloyes-mattP-seyi-/static/js/main.e8ac68de.chunk.js.map",
+    "runtime-main.js": "/trelloyes-mattP-seyi-/static/js/runtime-main.a0f278e0.js",
+    "runtime-main.js.map": "/trelloyes-mattP-seyi-/static/js/runtime-main.a0f278e0.js.map",
+    "static/js/2.0f8b9328.chunk.js": "/trelloyes-mattP-seyi-/static/js/2.0f8b9328.chunk.js",
+    "static/js/2.0f8b9328.chunk.js.map": "/trelloyes-mattP-seyi-/static/js/2.0f8b9328.chunk.js.map",
+    "index.html": "/trelloyes-mattP-seyi-/index.html",
+    "precache-manifest.260a67a5e38288a19fdc3bae6590067a.js": "/trelloyes-mattP-seyi-/precache-manifest.260a67a5e38288a19fdc3bae6590067a.js",
+    "service-worker.js": "/trelloyes-mattP-seyi-/service-worker.js",
+    "static/css/main.89af4e8e.chunk.css.map": "/trelloyes-mattP-seyi-/static/css/main.89af4e8e.chunk.css.map",
+    "static/js/2.0f8b9328.chunk.js.LICENSE.txt": "/trelloyes-mattP-seyi-/static/js/2.0f8b9328.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0f278e0.js",
+    "static/js/2.0f8b9328.chunk.js",
+    "static/css/main.89af4e8e.chunk.css",
+    "static/js/main.e8ac68de.chunk.js"
+  ]
+}
