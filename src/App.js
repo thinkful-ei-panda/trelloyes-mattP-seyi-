@@ -19,6 +19,38 @@ class App extends React.Component {
     })
   }
 
+  cardGenerator = (id) => {
+    return {
+      id,
+      title: `Random Card ${id}`,
+      content: 'lorem ipsum',
+    }
+  }
+
+  newRandomCard = (listId) => {
+    const idTemp = Math.random().toString(36).substring(2, 4)
+      + Math.random().toString(36).substring(2, 4);
+    console.log(idTemp);
+
+    const newAllCards = { ...this.state.allCards, [idTemp]: this.cardGenerator(idTemp) }
+
+    const newLists = this.state.lists.map(list => {
+      if (list.id === listId) {
+        const thisList = list;
+        thisList.cardIds.push(idTemp);
+        console.log(thisList);
+        return thisList;
+      } else {
+        return list;
+      }
+    })
+
+    this.setState({
+      lists: newLists,
+      allCards: newAllCards
+    })
+  }
+
   state = STORE
   render() {
     return (
@@ -33,6 +65,7 @@ class App extends React.Component {
               key={list.id}
               header={list.header}
               handleDelete={this.deleteCard}
+              handleAddRandom={this.newRandomCard}
               cards={list.cardIds.map(
                 (id) => this.state.allCards[id]
               )}

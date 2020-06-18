@@ -20,7 +20,7 @@ function List(props) {
             deleteCard={props.handleDelete}
           />
         ))}
-        <button type="button" className="List-add-button">
+        <button type="submit" className="List-add-button" onClick={() => props.handleAddRandom(props.listId)}>
           + Add Random Card
         </button>
       </div>

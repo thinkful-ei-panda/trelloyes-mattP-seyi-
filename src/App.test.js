@@ -4,23 +4,24 @@ import renderer from 'react-test-renderer'
 import App from './App'
 
 describe('<App />', () => {
-	const defaultProps = {
-		key: 'key',
-		header: 'header',
-		cards: {
-			a: 'a',
-			b: 'b',
-		},
-	}
+  const defaultProps = {
+    key: 'key',
+    header: 'header',
+    cards: {
+      a: 'a',
+      b: 'b',
+    },
+  }
 
-	it('render as expected', () => {
-		const wrapper = renderer.create(<App />).toJSON()
-		expect(wrapper).toMatchSnapshot()
-	})
+  it('render as expected', () => {
+    const wrapper = renderer.create(<App />).toJSON()
+    expect(wrapper).toMatchSnapshot()
+  })
 
-	it('should render without crashing', () => {
-		const main = document.createElement('main')
-		ReactDOM.render(<App {...defaultProps} />, main)
-		ReactDOM.unmountComponentAtNode(main)
-	})
+  it('should render without crashing', () => {
+    const main = document.createElement('main')
+    ReactDOM.render(<App {...defaultProps} />, main)
+    ReactDOM.unmountComponentAtNode(main)
+  })
+
 })
