@@ -35,13 +35,9 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "2.0.5",
     "react-test-renderer": "^16.13.1"
-=======
-    "gh-pages": "^3.0.0"
->>>>>>> 9a78fb5414fd3da5b166379cc0fefa79bb180f45
   }
 }

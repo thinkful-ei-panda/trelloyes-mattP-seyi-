@@ -1,9 +1,18 @@
 import React from 'react'
 import './App.css'
 import List from './List'
-import store from './STORE'
+import STORE from './STORE'
 
 class App extends React.Component {
+	// create state
+	// add functions to modify state
+	// pass down modifying functions to children as props
+
+	deleteCard = () => {
+		console.log('delete')
+	}
+
+	state = STORE
 	render() {
 		return (
 			<main className="App">
@@ -11,12 +20,13 @@ class App extends React.Component {
 					<h1>Trelloyes!</h1>
 				</header>
 				<div className="App-list">
-					{store.lists.map((list) => (
+					{this.state.lists.map((list) => (
 						<List
 							key={list.id}
 							header={list.header}
+							handleDelete={this.deleteCard}
 							cards={list.cardIds.map(
-								(id) => store.allCards[id]
+								(id) => this.state.allCards[id]
 							)}
 						/>
 					))}
