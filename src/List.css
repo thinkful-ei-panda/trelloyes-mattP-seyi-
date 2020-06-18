@@ -1,5 +1,11 @@
+/* LIST STYLES */
+
 .List {
   min-width: 218px;
+}
+
+.List:not(:first-of-type) {
+  margin-left: 8px;
 }
 
 .List-header h2,
@@ -14,7 +20,7 @@
 
 .List-header,
 .List-cards {
-  background-color: hsl(206, 12%, 89%);
+  background-color: #dfe3e6;
   padding: 0 6px 4px;
 }
 
